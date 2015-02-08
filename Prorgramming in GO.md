@@ -201,6 +201,50 @@ jika diberikan perintah :
     dalam operator NOT menjadi :
     !(a>b) menghasilkan ‘FALSE’
 
+## BAB 4. VARIABLES
+
+*Variable* adalah sebuah lokasi penyimpanan suatu nilai dengan spesifikasi tipe dan nama yang terkait. Mudahnya bisa digambarkan ketika kita akan memberikan nilai ke dalam suatu lokasi, maka yang harus dilakukan adalah menyiapkan lokasi terlebih dahulu. Analoginya, seperti kita ingin mengambil air putih, sebelum kita menuangkan air putih terlebih dahulu tentunya kita akan menyiapkan gelas, bukan? Barulah air dapat terisi. 
+
+Sudah bias dibayangkan sampai sini?
+
+Jika sudah.. Baik, kita lanjutkan..
+
+Coba perhatikan terlebih dahulu bentuk deklarasi *variable* pada program Go berikut :
+```go
+package main
+
+import "fmt"
+
+func main() {
+    var x string = "Hello World"
+    fmt.Println(x)
+}
+```
+
+Dari program tersebut, bisa kita lihat *variable* di dalam Go dibuat dari kata kunci var. Deklarasi ‘var’ ini dibuat untuk mempermudah dalam membaca, yaitu hanya mengambil tiga buah huruf  di awal kata dari *‘variable’*. Bisa dipahami bahwa 'var' mendeklarasikan nama *variable* ‘x’ dengan tipe data ‘string’ (Hello Word). Dari pemahaman tersebut, disimpulkan bahwa pembuatan *variable* dalam Go memiliki aturanya tersendiri, diantaranya :
+1. Nama *variable* dapat dibuat menggunakan huruf, angka atau *underscore*
+2. Nama *variable* tidak boleh sama dengan kata kunci yang telah ada didalam Go 
+3. Nama *variable* diawali oleh karakter huruf
+4. Penulisan huruf capital dan huruf keci dapat mempengaruhi karena berbeda makna
+
+Adapun hal yang membedakan Go dengan bahasa pemrograman lainnya adalah, penamaan *variable* dapat dipermudah atau dipersingkat dengan mendeklarasikan :
+
+    x := 9
+    artinya : var x int = 9
+
+Yaitu *create and assign* dengan penulisan nama *variable* ‘x’, diikuti tanda titik dua dan sama dengan, angka 9 adalah isi dari *variable* yang dideklarasikan yaitu berfungsi untuk mengembalikan nilai. Penelisan seperti itu mempersingkat pendeklarasiaan *variable*.
+
+###Cara Penamaan *Variable*
+
+Didalam pengembangan perangkat lunak, penamaan suatu *variable* merupakan hal yang penting. Pembuatan nama *variable* bertujuan untuk menggambarkan tipe *variable* apa yang kita tuju. Dalam perkembangannya, Go memiliki aturan untuk penamaan *variable* dengan 2 suku kata, dimana pada Go tidak di tulis menjadi 2 suku kata terpisah tetapi 2 suku kata yang digabung, namun memiliki aturan :
+1. Huruf pertama dari kata pertama adalah huruf kecil dan seterusnya
+2. Huruf pertama dari kata-kata selanjutnya adalah huruf besar dan seterusnya huruf kecil. Contoh :
+    
+    catsName := “Brown”
+    fmt.Println (“My Cat’s name is”, catasName)
+
+Penulisan huruf kapital pada kata kedua untuk memanipulasi pemberian spasi.
+
 
 ##BAB 5. *CONTROL STRUCTURES*
 
@@ -384,7 +428,7 @@ func main() {
 
 Fungsi merupakan bagian independen yang memetakan nol atau lebih parameter input ke nol atau lebih parameter output. Fungsi juga dikenal sebagai prosedur atau subrutin.
 
-###Bekerja dengan Lebih dari Satu Fungsi
+###1. Bekerja dengan Lebih dari Satu Fungsi
 
 Pada program yang sebelumnya kita bekerja dengan hanya satu fungsi. Pada bagian ini akan dijelaskan bagaimana membuat program dengan lebih dari satu fungsi.
 
@@ -406,7 +450,7 @@ func main() {
 
 Program di atas akan memberikan output berupa nilai rata-rata dari angka yang ada di dalam array `xs`. Fungsi main merupakan fungsi utama yang dijalankan pertama kali. Di dalam fungsi main diinisialisasi sebuah array `xs` yang berisi lima bilangan. Lalu di dalam fungsi main juga terdapat perintah `fmt.Println(average(xs))` yang memanggil fungsi average dan memasukkan nilai `xs` ke dalamnya. Setelah perintah di dalam fungsi average dieksekusi maka akan dijalankan perintah untuk menampilkan nilai rata-rata dari kelima bilangan tersebut.
 
-###Mengembalikan Lebih dari Satu Nilai
+###2. Mengembalikan Lebih dari Satu Nilai
 
 Dalam bahasa Go juga memungkinkan kita untuk  mengembalikan beberapa nilai dari suatu fungsi. Contoh:
 
@@ -423,7 +467,7 @@ func main() {
 
 Fungsi f mengembalikan dua nilai `(int, int)` yaitu 5 dan 6 yang selanjutnya dipanggil dalam fungsi main.
 
-###Fungsi *Variadic*
+###3. Fungsi *Variadic*
 
 Fungsi jenis ini merupakan fungsi yang hanya dapat dijalankan pada bahasa Go. Dengan fungsi ini kita dapat membuat suatu variabel yang dapat berisi nol atau lebih nilai dengan menggunakan `...` sebelum tipe variabel.
 
@@ -442,7 +486,7 @@ func main() {
 
 Dengan program diatas kita dapat memasukkan nilai ke dalam fungsi dalam jumlah yang tidak perlu ditentukan terlebih dahulu.
 
-###*Closure*
+###*4. Closure*
 
 *Closure* merupakan suatu fungsi yang berisi fungsi lain di dalamnya. Contoh:
 
@@ -459,7 +503,7 @@ func main() {
 
 Di dalam fungsi main terdapat variabel `add` dengan tipe `func(int,int)int` (sebuah fungsi yang berisi dua `int` dan mengembalikan satu `int`.
 
-###Rekursi
+###5. Rekursi
 
 Suatu fungsi dapat memanggil dirinya sendiri dalam fungsi rekursi. Contohnya adalah dalam program penghitung nilai faktorial berikut:
 
