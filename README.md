@@ -5,3 +5,7 @@ Tulisan ini berisi tentang [Pemrograman Komputer Menggunakan Bahasa GO](https://
 Dirangkum oleh Della Tiaraputri Aldrifisia dan Rizky Amelia
 
 Selamat membaca :)
+
+![](http://macshuo.com/wp-content/uploads/2014/03/Go.jpg)
+
+
